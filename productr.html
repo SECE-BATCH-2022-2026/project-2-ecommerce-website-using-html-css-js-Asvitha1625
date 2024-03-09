@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefcfc;
+        }
+        header {
+            background-color: #79d0f0;
+            color: #fefcfc;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color:pink;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #0b0000;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-details img {
+            width: 450px;
+            height: 450px;
+            max-width: 100%;
+        }
+        .product-details h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            color:rgba(11, 10, 10, 0.878);
+        }
+        .product-details p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: rgb(15, 14, 14);
+        }
+        footer {
+            background-color:#79d0f0;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .cylindrical-button {
+            background-color: pink;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cylindrical-button:hover {
+            background-color: #59afe5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1><i>NANO</i></h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      
+    </nav>
+    <div class="product-details">
+        <h1> DOG</h1>
+        <img src="assets/dog.png" height="200px" width="250px" alt="Product Image" id="product-image">
+        <h2 id="product-name"></h2>
+        <p id="product-price"></p>
+        <p id="product-description"></p>
+        <a class="cylindrical-button" href="#">ADD</a>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const productName = params.get('productName');
+        const price = params.get('price');
+        const description = params.get('description');
+
+        document.getElementById('product-name').innerText = productName;
+        document.getElementById('product-price').innerText = 'Price: ' + "RS.299.99";
+        document.getElementById('product-description').innerText =  "Indulge your furry friend with the Nano Dog Toy, crafted with durable materials for hours of playtime. Its charming design and vibrant colors make it an irresistible companion for your pet. Perfect for interactive games or solo play, this toy promises endless entertainment and exercise for your beloved canine.";
+        
+    </script>
+     <footer>
+        <p>&copy; 2024 My Simple E-commerce Website</p>
+    </footer>
+</body>
+</html>
